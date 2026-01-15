@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <title>Tohfe</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    </head>
+    <body>
+        <section class="main hide">
+            <input type="text" placeholder="Enter your booking code..." />
+            <img src="img/spinner.gif" />
+            <img src="img/ghost.gif" />
+        </section>
+        <section class="seat-selection">
+            <h1>Select your seat</h1>
+            <div class="seats">
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+
+                <label>
+                    <div>
+                        <input type="checkbox" />
+                    </div>
+                </label>
+                 <span></span>
+                 <span></span>   
+            </div>
+            <button>
+                Confirm
+            </button>
+        </section>
+        <section class="">
+            <h1>Congratulations</h1>
+            <p>
+                You have selected seat 3
+            </p>
+        </section>
+        <style>
+            body{
+                margin: 0px;
+                font-family: quicksand;
+            }
+
+            .main{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .main input[type=text]{
+                padding: .5em 1em;
+                border-radius: 1em;
+                border: 1px solid gray;
+                box-sizing: border-box;
+                font: 13pt Calibri;
+                width: 70vw;
+            }
+
+            .main img{
+                height: 64px;
+                width: 64px;
+            }
+
+            .hide{
+                display: none;
+            }
+
+            div.seats{
+                display: grid;
+                margin: 10px;
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: auto auto;
+                grid-gap: 10px 10px;
+            }
+
+            div.seats div{
+                width: 20vw;
+                height: 35vw;
+                background-image: url("img/car-seat.webp");
+                display: flex;
+                align-items: end;
+                justify-content: end;
+                background-position: center;
+                background-size: cover;
+            }
+
+            div.seats input[type=checkbox]{
+                padding: 3em;
+                color: black;
+            }
+
+            section button{
+                color: white;
+                background-color: green;
+                width: 70vw;
+                margin: 10vh 15vw;
+                padding: 3vh 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 15pt;
+                font-weight: bold;
+                font-family: inherit;
+            }
+        </style>
+    </body>
+</html>
