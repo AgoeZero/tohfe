@@ -2,3 +2,12 @@
     font-family: quicksand;
     src: url("quicksand.ttf");
 }
+
+@font-face {
+    font-family: "Good Timing bd";
+    src: url("good-timing-bd.otf");
+}
+
+h1,h2 {
+    font-family: "Good Timing bd" !important;
+}
