@@ -311,6 +311,9 @@
             <br />
             <input type="text" placeholder="Telephone" />
             <br />
+            <div class="error" style="color: red; font-style: italic;text-align: center; font-weight: bold;">
+                
+            </div>
             <button>
                 Save
             </button>
@@ -319,13 +322,15 @@
             <h1 style="grid-area:1/1/span 1/span 2;text-align:center;">Ticket</h1>
             <span></span><span></span>
             <b>Name</b><p>John Adjei</p>
-            <b>Tel</b><p>0545953395</p>
+            <b>Phone</b><p>0545953395</p>
             <b>Seat</b><p><b>#3</b></p>
-            <div style="grid-area:6/1/span 1/span 2;border-bottom: 1px solid black;"></div>
-            <p style="grid-area:7/1/span 1/span 2;font-size:18pt;">
+            <b>Departure</b><p>24th January 2026</p>
+            <b>Time</b><p>09:00 am</p>
+            <div style="grid-area:8/1/span 1/span 2;border-bottom: 1px solid black;padding:2vh 0px;"></div>
+            <p style="grid-area:9/1/span 1/span 2;font-size:18pt;">
                 <i>Screenshot your ticket!</i>
             </p>
-            <button style="margin: 10vh auto;grid-area: 8/1/span 1/span 2;cursor: pointer;" onclick="showPage(1)">Back to Home</button>
+            <button style="margin: 10vh auto;grid-area: 10/1/span 1/span 2;cursor: pointer;" onclick="showPage(1)">Back to Home</button>
         </section>
         <style>
             :root{
@@ -442,7 +447,7 @@
 
             .congratulations{
                 display: grid;
-                grid-template-rows: 5vh 5vh 5vh 5vh;
+                grid-template-rows: 5vh 5vh 5vh 5vh 5vh 5vh;
                 grid-template-columns: 40% 60%;
                 align-items: center;
                 box-sizing: border-box;
@@ -451,5 +456,43 @@
         </style>
         <script src="ajax.js"></script>
         <script src="main.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+        <script>
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT.firebaseapp.com",
+            projectId: "YOUR_PROJECT",
+            storageBucket: "YOUR_PROJECT.appspot.com",
+            messagingSenderId: "...",
+            appId: "..."
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        </script>
+
+        <script>
+        const auth = firebase.auth();
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .then(user => {
+            console.log("Logged in:", user.user.uid);
+            })
+            .catch(err => console.error(err));
+        </script>
+
+
+        <script>
+        const db = firebase.firestore();
+
+        db.collection("players").add({
+            name: "Halo",
+            score: 42
+        });
+        </script>
+
     </body>
 </html>

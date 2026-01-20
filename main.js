@@ -4,6 +4,7 @@ const msg = document.querySelector(".main p");
 const pages = document.querySelectorAll("section");
 const seats = document.querySelectorAll(".seats div");
 const fields = pages[4].querySelectorAll("p");
+const error = document.querySelector(".error");
 var seat = 0;
 
 for (var i=0; i < seats.length; ++i){
@@ -55,15 +56,17 @@ function showPage(n){
 
 document.querySelector(".your-details button").addEventListener("click",function(){
     var inputs = document.querySelectorAll(".your-details input[type=text]");
-    if (inputs[0].value.match(/[A-Za-z]+\s[A-Za-z]+/)){
+    if (inputs[0].value.match(/^[A-Za-z]+\s[A-Za-z\s]+$/)){
         fields[0].innerText = inputs[0].value;
     } else {
-    inputs[0].focus();
+        error.innerText = "Please enter your full name."
+        inputs[0].focus();
         return;
     }
-    if (inputs[1].value.match(/[0-9]{10,10}/)){
+    if (inputs[1].value.match(/^0[235][0-9]{8,8}$/)){
         fields[1].innerText = inputs[1].value;
     } else {
+        error.innerText = "Please enter a valid phone number";
         inputs[1].focus();
         return;
     }
